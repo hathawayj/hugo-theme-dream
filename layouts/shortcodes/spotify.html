@@ -1,6 +1,6 @@
-{{ if .IsNamedParams }}
+{{ if len .Params | eq 3 }}
 
-<iframe src="https://open.spotify.com/embed/{{ .Get 1 }}/{{ .Get 0 }}?utm_source=generator&theme=0" width="100%" height="{{ .Get "height" }}" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+<iframe src="https://open.spotify.com/embed/{{ .Get 1 }}/{{ .Get 0 }}?utm_source=generator&theme=0" width="100%" height="{{ .Get 2 }}" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
 
 {{ else }}
 
@@ -11,5 +11,5 @@
 
 
 <!-- second argument can be episode, show, playlist -->
-<!-- third argument named height 152 is default small, 380 default Normal, but can be anything  -->
+<!-- third argument is height 152 is default small, 380 default Normal, but can be anything  -->
 
